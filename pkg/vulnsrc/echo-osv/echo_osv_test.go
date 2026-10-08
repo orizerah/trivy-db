@@ -124,22 +124,78 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"advisory-detail",
-						"CVE-2024-88888",
+						"CVE-2026-54513",
 						"echo maven::Echo OSV",
-						"org.apache.commons:commons-lang3",
+						"com.fasterxml.jackson.core:jackson-databind",
 					},
 					Value: types.Advisory{
 						VendorIDs: []string{
-							"ECHO-mvn1-0000-0001",
+							"GHSA-rmj7-2vxq-3g9f",
+							"ECHO-5950-3ca7-8a02",
 						},
-						PatchedVersions:    []string{"3.14.0+echo.999"},
-						VulnerableVersions: []string{">=3.14.0+echo.1, <3.14.0+echo.999"},
+						PatchedVersions:    []string{"2.20.2+echo.1"},
+						VulnerableVersions: []string{"<2.20.2+echo.1"},
+					},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2026-54513",
+						"echo maven::Echo OSV",
+						"tools.jackson.core:jackson-databind",
+					},
+					Value: types.Advisory{
+						VendorIDs: []string{
+							"GHSA-rmj7-2vxq-3g9f",
+							"ECHO-5950-3ca7-8a02",
+						},
+						PatchedVersions:    []string{"3.1.4"},
+						VulnerableVersions: []string{"<3.1.4"},
 					},
 				},
 				{
 					Key: []string{
 						"vulnerability-id",
-						"CVE-2024-88888",
+						"CVE-2026-54513",
+					},
+					Value: map[string]any{},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2026-54517",
+						"echo maven::Echo OSV",
+						"com.fasterxml.jackson.core:jackson-databind",
+					},
+					Value: types.Advisory{
+						VendorIDs: []string{
+							"GHSA-5hh8-q8hv-fr38",
+							"ECHO-6681-8823-c8a0",
+						},
+						PatchedVersions:    []string{"2.21.4"},
+						VulnerableVersions: []string{"<2.21.4"},
+					},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2026-54517",
+						"echo maven::Echo OSV",
+						"tools.jackson.core:jackson-databind",
+					},
+					Value: types.Advisory{
+						VendorIDs: []string{
+							"GHSA-5hh8-q8hv-fr38",
+							"ECHO-6681-8823-c8a0",
+						},
+						PatchedVersions:    []string{"3.1.4"},
+						VulnerableVersions: []string{"<3.1.4"},
+					},
+				},
+				{
+					Key: []string{
+						"vulnerability-id",
+						"CVE-2026-54517",
 					},
 					Value: map[string]any{},
 				},
@@ -160,22 +216,46 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"advisory-detail",
-						"CVE-2024-66666",
+						"CVE-2026-73086",
 						"echo npm::Echo OSV",
-						"@babel/traverse",
+						"nanoid",
 					},
 					Value: types.Advisory{
 						VendorIDs: []string{
-							"ECHO-2024-2468",
+							"GHSA-xwg4-73v4-xw9w",
+							"ECHO-bc75-657e-24f9",
 						},
-						PatchedVersions:    []string{"7.23.2+echo.999"},
-						VulnerableVersions: []string{">=7.23.2+echo.1, <7.23.2+echo.999"},
+						PatchedVersions:    []string{"3.3.6+echo.2"},
+						VulnerableVersions: []string{"<3.3.6+echo.2"},
 					},
 				},
 				{
 					Key: []string{
 						"vulnerability-id",
-						"CVE-2024-66666",
+						"CVE-2026-73086",
+					},
+					Value: map[string]any{},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2026-3449",
+						"echo npm::Echo OSV",
+						"@tootallnate/once",
+					},
+					Value: types.Advisory{
+						VendorIDs: []string{
+							"GHSA-vpq2-c234-7xj6",
+							"ECHO-318f-4145-6b35",
+						},
+						PatchedVersions:    []string{"2.0.1"},
+						VulnerableVersions: []string{"<2.0.1"},
+					},
+				},
+				{
+					Key: []string{
+						"vulnerability-id",
+						"CVE-2026-3449",
 					},
 					Value: map[string]any{},
 				},
